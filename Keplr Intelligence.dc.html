@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Serif:wght@400;500;600&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;display=swap" rel="stylesheet">
+<style>
+  @font-face{font-family:'Helixa';src:url('fonts/Helixa-Light.ttf') format('truetype');font-weight:300;font-style:normal;}
+  @font-face{font-family:'Helixa';src:url('fonts/Helixa-Regular.otf') format('opentype');font-weight:400;font-style:normal;}
+  @font-face{font-family:'Helixa';src:url('fonts/Helixa-Bold.otf') format('opentype');font-weight:700;font-style:normal;}
+  @font-face{font-family:'Helixa';src:url('fonts/Helixa-BlackItalic.ttf') format('truetype');font-weight:900;font-style:italic;}
+  body{margin:0;background:#F5F9FD;color:#030307;font-family:'Helixa','IBM Plex Sans',sans-serif;-webkit-font-smoothing:antialiased;}
+  a{color:#2F80ED;text-decoration:none;}
+  a:hover{color:#5B9CF2;text-decoration:underline;}
+  ::selection{background:rgba(47,128,237,0.35);}
+</style>
+</helmet>
+
+<div style="width:100%;max-width:100%;overflow-x:hidden;">
+
+  <!-- NAV -->
+  <div style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:18px 48px;background:rgba(245,249,253,0.85);backdrop-filter:blur(8px);border-bottom:1px solid rgba(3,3,7,0.1);">
+    <img src="images/keplr-logo-white.png" alt="KEPLR Intelligence" style="height: 64px; width: auto; display: block; filter: invert(1)">
+    <a href="#contact" style="font-family:'IBM Plex Mono',monospace;font-size:13px;border:1px solid #9C7530;padding:8px 16px;color:#9C7530;">CONTACT US</a>
+  </div>
+
+  <!-- HERO -->
+  <section style="padding:{{ heroPadTop }}px 48px {{ heroPadBottom }}px;max-width:920px;margin:0 auto;background:radial-gradient(ellipse 900px 500px at 15% 0%,rgba(47,128,237,0.16),transparent 70%),radial-gradient(ellipse 700px 400px at 90% 20%,rgba(230,193,122,0.10),transparent 70%);">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#9C7530;text-transform:uppercase;margin-bottom:24px;">Technology Overview</div>
+    <h1 style="font-family:{{ headingFontFamily }};font-size:88px;line-height:0.98;font-weight:600;margin:0 0 28px;letter-spacing:-0.03em;">The Mission<br>Intelligence Layer</h1>
+    <p style="font-family:'IBM Plex Mono',monospace;font-size:17px;color:rgba(3,3,7,0.62);margin:0;">Continuous Operational State Across Actors, Environments, and Governance&nbsp;</p>
+  </section>
+
+  <div style="height:1px;background:rgba(3,3,7,0.1);max-width:920px;margin:0 auto;"></div>
+
+  <!-- 01 PLATFORM CONTEXT -->
+  <section style="padding:{{ sectionPad }}px 48px;max-width:920px;margin:0 auto;">
+    <div style="display:flex;gap:8px;align-items:flex-start;">
+      <div style="{{ numeralStyle }}">01</div>
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.08em;color:rgba(3,3,7,0.5);text-transform:uppercase;margin-bottom:12px;">Platform Context</div>
+        <h2 style="font-family:{{ headingFontFamily }};font-size:32px;font-weight:600;margin:0 0 24px;line-height:1.25;">Modern Mission-Critical Operations</h2>
+        <p style="font-size:18px;line-height:1.7;color:rgba(3,3,7,0.75);margin:0 0 20px;">Mission-critical operations are dynamic computational environments. Sensors, platforms, autonomous systems, and human operators interact while objectives, available information, operational constraints, and security policies evolve throughout execution.</p>
+        <p style="font-size:18px;line-height:1.7;color:rgba(3,3,7,0.75);margin:0 0 20px;">Events emerge and propagate. Decisions are made and executed. Sensors become available, degrade, or fail. Human and autonomous actors perceive, reason, collaborate, and adapt. Classification, releasability, and dissemination policies change as operations cross organizational and security boundaries.</p>
+        <div style="margin-top:32px;padding-top:28px;border-top:1px solid rgba(3,3,7,0.12);">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.08em;color:rgba(3,3,7,0.5);text-transform:uppercase;margin-bottom:12px;">The Architectural Premise</div>
+          <p style="font-family:{{ headingFontFamily }};font-size:22px;line-height:1.6;font-weight:600;margin:0;">These changes do not occur independently. Together, they define the operational state of the mission.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div style="height:1px;background:rgba(3,3,7,0.1);max-width:920px;margin:0 auto;"></div>
+
+  <!-- 02 PLATFORM DEFINITION -->
+  <section style="padding:{{ sectionPad }}px 48px;max-width:920px;margin:0 auto;">
+    <div style="display:flex;gap:8px;align-items:flex-start;">
+      <div style="{{ numeralStyle }}">02</div>
+      <div style="flex:1;min-width:0;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.08em;color:rgba(3,3,7,0.5);text-transform:uppercase;margin-bottom:12px;">Platform Definition</div>
+        <h2 style="font-family:{{ headingFontFamily }};font-size:32px;font-weight:600;margin:0 0 24px;line-height:1.25;">The Mission Intelligence Layer</h2>
+        <p style="font-size:18px;line-height:1.7;color:rgba(3,3,7,0.75);margin:0 0 20px;">KEPLR Intelligence develops the Mission Intelligence Layer: a foundational layer positioned between heterogeneous mission data sources and downstream mission systems.</p>
+        <p style="font-size:18px;line-height:1.7;color:rgba(3,3,7,0.75);margin:0 0 20px;">The layer continuously computes the computational representations required to estimate and maintain mission state, including detections, tracks, temporal patterns, event inferences, behavioural estimates, confidence measures, and risk indicators.</p>
+        <p style="font-size:18px;line-height:1.7;color:rgba(3,3,7,0.75);margin:0 0 32px;">These computations contribute to a shared operational representation spanning three coupled dimensions: mission actors, the operational environment, and operational trust.</p>
+        <div style="margin-bottom:48px;padding-top:28px;border-top:1px solid rgba(3,3,7,0.12);">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.08em;color:rgba(3,3,7,0.5);text-transform:uppercase;margin-bottom:12px;">Architectural Invariant</div>
+          <p style="font-family: {{ headingFontFamily }}; font-size: 20px; line-height: 1.6; font-weight: 500; margin: 0; font-style: normal">Operational state is the primary computational object. AI, multimodal fusion, stream processing, deterministic computation, and information governance operate together to estimate, maintain, and continuously update that state as the mission evolves.</p><p style="font-family: {{ headingFontFamily }}; font-size: 20px; line-height: 1.6; font-weight: 600; margin: 0; font-style: italic">Unlike conventional architectures that organize computation around sensors, data pipelines, algorithms, or applications, the Mission Intelligence Layer organizes all computation around a continuously evolving operational representation. Every computational process whether perception, reasoning, fusion, deterministic validation, or governance, contributes to the estimation and maintenance of that shared representation.</p>
+        </div>
+
+        <h3 style="font-family:{{ headingFontFamily }};font-size:22px;font-weight:600;margin:0 0 24px;">From Observations to Operational State</h3>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid rgba(3,3,7,0.12);">
+          <sc-for list="{{ flowSteps }}" as="step" hint-placeholder-count="4">
+            <div style="padding:20px 16px;border-left:1px solid rgba(3,3,7,0.12);">
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:{{ accentColor }};margin-bottom:8px;">{{ step.n }}</div>
+              <div style="font-family:{{ headingFontFamily }};font-size:16px;font-weight:600;margin-bottom:8px;">{{ step.title }}</div>
+              <div style="font-size:13px;line-height:1.5;color:rgba(3,3,7,0.6);">{{ step.desc }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div style="height:1px;background:rgba(3,3,7,0.1);max-width:920px;margin:0 auto;"></div>
+
+  <!-- 03 OPERATIONAL COMPUTATION ENGINE -->
+  <section style="padding:{{ sectionPad }}px 48px;max-width:920px;margin:0 auto;">
+    <div style="display:flex;gap:8px;align-items:flex-start;">
+      <div style="{{ numeralStyle }}">03</div>
+      <div style="flex:1;min-width:0;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.08em;color:rgba(3,3,7,0.5);text-transform:uppercase;margin-bottom:12px;">Operational Computation Engine</div>
+        <h2 style="font-family:{{ headingFontFamily }};font-size:32px;font-weight:600;margin:0 0 24px;line-height:1.25;">Unified Computational Disciplines</h2>
+        <p style="font-size:18px;line-height:1.7;color:rgba(3,3,7,0.75);margin:0 0 40px;">The Mission Intelligence Layer treats collection, synchronization, interpretation, fusion, and governance as one continuous computational problem rather than as independent pipelines. Five complementary disciplines operate within the same platform architecture.</p>
+
+        <div style="display:flex;flex-direction:column;gap:0;border:1px solid rgba(3,3,7,0.12);margin-bottom:40px;">
+          <sc-for list="{{ disciplines }}" as="d" hint-placeholder-count="5">
+            <div style="padding:22px 24px;border-top:1px solid rgba(3,3,7,0.12);">
+              <div style="font-family:{{ headingFontFamily }};font-size:17px;font-weight:600;margin-bottom:8px;">{{ d.name }}</div>
+              <div style="font-size:15px;line-height:1.65;color:rgba(3,3,7,0.7);">{{ d.desc }}</div>
+            </div>
+          </sc-for>
+        </div>
+
+        <h3 style="font-family:{{ headingFontFamily }};font-size:22px;font-weight:600;margin:0 0 16px;">Deployment Architecture</h3>
+        <p style="font-size:17px;line-height:1.7;color:rgba(3,3,7,0.75);margin:0 0 16px;">The platform is designed to integrate with mission systems without requiring KEPLR to become part of certified embedded flight software. It can execute on operator devices, local edge-compute platforms, on-premises infrastructure, air-gapped environments, and sovereign cloud infrastructure, subject to the compute and integration requirements of each deployment.</p>
+        <p style="font-size:17px;line-height:1.7;color:rgba(3,3,7,0.7);margin:0;">The operational model remains consistent across deployment profiles. Runtime packaging, model selection, interfaces, and compute allocation may vary without changing the underlying representation of actors, environment, and trust.</p>
+      </div>
+    </div>
+  </section>
+
+  <div style="height:1px;background:rgba(3,3,7,0.1);max-width:920px;margin:0 auto;"></div>
+
+  <!-- 04 SHARED OPERATIONAL REPRESENTATION -->
+  <section style="padding:{{ sectionPad }}px 48px;max-width:920px;margin:0 auto;">
+    <div style="display:flex;gap:8px;align-items:flex-start;">
+      <div style="{{ numeralStyle }}">04</div>
+      <div style="flex:1;min-width:0;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.08em;color:rgba(3,3,7,0.5);text-transform:uppercase;margin-bottom:12px;">Shared Operational Representation</div>
+        <h2 style="font-family:{{ headingFontFamily }};font-size:32px;font-weight:600;margin:0 0 24px;line-height:1.25;">A Living Model of Mission Execution</h2>
+        <p style="font-size:18px;line-height:1.7;color:rgba(3,3,7,0.75);margin:0 0 48px;">At the core of the platform is a living computational representation that evolves as observations, actors, and operational conditions change. The representation is organized across three complementary and interacting dimensions.</p>
+
+        <div style="position:relative;height:420px;margin-bottom:48px;">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,{{ accentColor }},#9C7530);display:flex;align-items:center;justify-content:center;text-align:center;padding:12px;box-shadow:0 0 0 1px rgba(3,3,7,0.1);">
+            <div style="color:#fff;font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:0.04em;line-height:1.5;">MISSION<br>INTELLIGENCE<br>LAYER</div>
+          </div>
+          <svg style="position:absolute;inset:0;width:100%;height:100%;" viewBox="0 0 760 420" preserveAspectRatio="none">
+            <line x1="380" y1="210" x2="160" y2="74" stroke="rgba(3,3,7,0.25)" stroke-width="1"></line>
+            <line x1="380" y1="210" x2="600" y2="74" stroke="rgba(3,3,7,0.25)" stroke-width="1"></line>
+            <line x1="380" y1="210" x2="380" y2="370" stroke="rgba(3,3,7,0.25)" stroke-width="1"></line>
+          </svg>
+          <div style="position:absolute;top:0;left:0;width:230px;border:1px solid rgba(3,3,7,0.18);background:rgba(197,228,248,0.4);padding:18px;text-align:center;">
+            <div style="font-size:13px;color:rgba(3,3,7,0.5);margin-bottom:6px;">Operational Actors</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:15px;">AiCumen™</div>
+          </div>
+          <div style="position:absolute;top:0;right:0;width:230px;border:1px solid rgba(3,3,7,0.18);background:rgba(197,228,248,0.4);padding:18px;text-align:center;">
+            <div style="font-size:13px;color:rgba(3,3,7,0.5);margin-bottom:6px;">Operational Environment</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:15px;">AiREA™</div>
+          </div>
+          <div style="position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:230px;border:1px solid rgba(3,3,7,0.18);background:rgba(197,228,248,0.4);padding:18px;text-align:center;">
+            <div style="font-size:13px;color:rgba(3,3,7,0.5);margin-bottom:6px;">Operational Governance</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:15px;">AiPSIS™</div>
+          </div>
+        </div>
+
+        <div style="margin-bottom:36px;">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.08em;color:rgba(3,3,7,0.58);text-transform:uppercase;margin-bottom:4px;">Operational Actors</div>
+          <h3 style="font-family:{{ headingFontFamily }};font-size:22px;font-weight:600;margin:0 0 8px;">AiCumen™</h3>
+          <div style="font-size:15px;color:rgba(3,3,7,0.55);font-style:italic;margin-bottom:12px;">Who is acting, deciding, and how it is performing?</div>
+          <p style="font-size:17px;line-height:1.7;color:rgba(3,3,7,0.75);margin:0;">Maintains the state of the operator (human or autonomous system). Represents actor condition, behaviour, workload, performance, decisions, interactions, and inferred intent where evidence supports it.</p>
+        </div>
+        <div style="margin-bottom:36px;">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.08em;color:rgba(3,3,7,0.58);text-transform:uppercase;margin-bottom:4px;">Operational Environment</div>
+          <h3 style="font-family:{{ headingFontFamily }};font-size:22px;font-weight:600;margin:0 0 8px;">AiREA™</h3>
+          <div style="font-size:15px;color:rgba(3,3,7,0.55);font-style:italic;margin-bottom:12px;">What is happening in physical and mission reality that could impact Actor performance?</div>
+          <p style="font-size:17px;line-height:1.7;color:rgba(3,3,7,0.75);margin:0;">Maintains the operational representation of physical and mission reality, including assets, detected entities, spatial relationships, environmental conditions, sensor availability, and physical evolution.</p>
+        </div>
+        <div style="margin-bottom:40px;">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.08em;color:rgba(3,3,7,0.58);text-transform:uppercase;margin-bottom:4px;">Operational Governance</div>
+          <h3 style="font-family:{{ headingFontFamily }};font-size:22px;font-weight:600;margin:0 0 8px;">AiPSIS™</h3>
+          <div style="font-size:15px;color:rgba(3,3,7,0.55);font-style:italic;margin-bottom:12px;">What information is valid, authorized, releasable, and permissible?</div>
+          <p style="font-size:17px;line-height:1.7;color:rgba(3,3,7,0.75);margin:0;">Maintains the basis on which information may be trusted, shared, and acted upon, including provenance, confidence, authority, classification, releasability, dissemination, and compliance.</p>
+        </div>
+
+        <div style="padding-top:28px;border-top:1px solid rgba(3,3,7,0.12);">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.08em;color:rgba(3,3,7,0.5);text-transform:uppercase;margin-bottom:12px;">Coupled State</div>
+          <p style="font-size:17px;line-height:1.7;color:rgba(3,3,7,0.75);margin:0;">The three representations are not separate products. Changes in actors affect the environment; environmental changes alter actor decisions; trust conditions determine which observations and conclusions may be used, shared, or acted upon.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div style="height:1px;background:rgba(3,3,7,0.1);max-width:920px;margin:0 auto;"></div>
+
+  <!-- 05 EXPOSED SYSTEM CAPABILITIES -->
+  <section style="padding:{{ sectionPad }}px 48px;max-width:920px;margin:0 auto;">
+    <div style="display:flex;gap:8px;align-items:flex-start;">
+      <div style="{{ numeralStyle }}">05</div>
+      <div style="flex:1;min-width:0;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.08em;color:rgba(3,3,7,0.5);text-transform:uppercase;margin-bottom:12px;">Exposed System Capabilities</div>
+        <h2 style="font-family:{{ headingFontFamily }};font-size:32px;font-weight:600;margin:0 0 24px;line-height:1.25;">Capabilities Generated from Shared State</h2>
+        <p style="font-size:18px;line-height:1.7;color:rgba(3,3,7,0.75);margin:0 0 40px;">Downstream systems consume capabilities generated from the shared operational representation rather than from isolated sensor pipelines.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px 40px;">
+          <sc-for list="{{ capabilities5 }}" as="c" hint-placeholder-count="5">
+            <div>
+              <div style="font-family:{{ headingFontFamily }};font-size:18px;font-weight:600;margin-bottom:8px;">{{ c.name }}</div>
+              <div style="font-size:15px;line-height:1.65;color:rgba(3,3,7,0.7);">{{ c.desc }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div style="height:1px;background:rgba(3,3,7,0.1);max-width:920px;margin:0 auto;"></div>
+
+  <!-- 06 TECHNICAL CAPABILITY STACK -->
+  <section style="padding:{{ sectionPad }}px 48px;max-width:920px;margin:0 auto;">
+    <div style="display:flex;gap:8px;align-items:flex-start;">
+      <div style="{{ numeralStyle }}">06</div>
+      <div style="flex:1;min-width:0;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.08em;color:rgba(3,3,7,0.5);text-transform:uppercase;margin-bottom:12px;">Technical Capability Stack</div>
+        <h2 style="font-family:{{ headingFontFamily }};font-size:32px;font-weight:600;margin:0 0 40px;line-height:1.25;">The Capabilities Behind the Platform</h2>
+        <div style="display:flex;flex-direction:column;gap:32px;">
+          <sc-for list="{{ capabilityGroups }}" as="group" hint-placeholder-count="5">
+            <div>
+              <div style="font-family:{{ headingFontFamily }};font-size:18px;font-weight:600;margin-bottom:12px;">{{ group.name }}</div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px 32px;">
+                <sc-for list="{{ group.items }}" as="cap" hint-placeholder-count="4">
+                  <div style="display:flex;gap:12px;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(3,3,7,0.08);">
+                    <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:{{ accentColor }};flex-shrink:0;">→</div>
+                    <div style="font-size:16px;color:rgba(3,3,7,0.8);">{{ cap }}</div>
+                  </div>
+                </sc-for>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div style="height:1px;background:rgba(3,3,7,0.1);max-width:920px;margin:0 auto;"></div>
+
+  <!-- 07 OPERATIONAL VALUE -->
+  <section style="padding:{{ sectionPad }}px 48px;max-width:920px;margin:0 auto;">
+    <div style="display:flex;gap:8px;align-items:flex-start;">
+      <div style="{{ numeralStyle }}">07</div>
+      <div style="flex:1;min-width:0;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.08em;color:rgba(3,3,7,0.5);text-transform:uppercase;margin-bottom:12px;">Operational Value</div>
+        <h2 style="font-family:{{ headingFontFamily }};font-size:32px;font-weight:600;margin:0 0 32px;line-height:1.25;">What the Architecture Enables</h2>
+        <div style="display:flex;flex-direction:column;gap:0;border:1px solid rgba(3,3,7,0.12);">
+          <sc-for list="{{ valueItems }}" as="v" hint-placeholder-count="4">
+            <div style="display:flex;gap:16px;padding:20px 22px;border-top:1px solid rgba(3,3,7,0.12);">
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:{{ accentColor }};flex-shrink:0;">—</div>
+              <div>
+                <span style="font-family:{{ headingFontFamily }};font-weight:600;font-size:16px;">{{ v.title }}: </span>
+                <span style="font-size:16px;line-height:1.6;color:rgba(3,3,7,0.75);">{{ v.desc }}</span>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div style="height:1px;background:rgba(3,3,7,0.1);max-width:920px;margin:0 auto;"></div>
+
+  <!-- 08 OPERATIONAL IMPLEMENTATIONS -->
+  <section style="padding:{{ sectionPad }}px 48px;max-width:920px;margin:0 auto;">
+    <div style="display:flex;gap:8px;align-items:flex-start;">
+      <div style="{{ numeralStyle }}">08</div>
+      <div style="flex:1;min-width:0;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.08em;color:rgba(3,3,7,0.5);text-transform:uppercase;margin-bottom:12px;">Operational Implementations</div>
+        <h2 style="font-family:{{ headingFontFamily }};font-size:32px;font-weight:600;margin:0 0 24px;line-height:1.25;">Programs &amp; Deployments</h2>
+        <p style="font-size:18px;line-height:1.7;color:rgba(3,3,7,0.75);margin:0 0 32px;">The Mission Intelligence Layer is currently deployed through operational implementations spanning aerospace, aviation, and human spaceflight. Each implementation applies the same foundational architecture to a different mission environment while sharing the underlying Mission Intelligence Layer.</p>
+
+        <div style="border:1px solid rgba(3,3,7,0.12);">
+          <div style="display:grid;grid-template-columns:180px 1.3fr 1.3fr;background:#0A0E16;color:#EAF2FB;">
+            <div style="padding:14px 20px;font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:0.04em;">OPERATIONAL DEPLOYMENT</div>
+            <div style="padding:14px 20px;font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:0.04em;border-left:1px solid rgba(234,242,251,0.15);">MISSION ENVIRONMENT</div>
+            <div style="padding:14px 20px;font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:0.04em;border-left:1px solid rgba(234,242,251,0.15);">ARCHITECTURAL CAPABILITY VALIDATED</div>
+          </div>
+          <div style="display:grid;grid-template-columns:180px 1.3fr 1.3fr;border-top:1px solid rgba(3,3,7,0.1);">
+            <div style="padding:18px 20px;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:15px;color:rgba(3,3,7,0.85);">SymbIA</div>
+            <div style="padding:18px 20px;font-size:15px;line-height:1.6;border-left:1px solid rgba(3,3,7,0.1);color:rgba(3,3,7,0.75);">Human–autonomy teaming in distributed search-and-rescue missions involving heterogeneous aerial, ground, and legged robotic systems operating beyond visual line of sight (BVLOS), under intermittent communications, physical hazards, and time-critical decision-making.</div>
+            <div style="padding:18px 20px;font-size:15px;line-height:1.6;border-left:1px solid rgba(3,3,7,0.1);color:rgba(3,3,7,0.75);">Continuous actor-state estimation, calibrated human–autonomy collaboration, and operational governance across distributed autonomous teams.</div>
+          </div>
+          <div style="display:grid;grid-template-columns:180px 1.3fr 1.3fr;border-top:1px solid rgba(3,3,7,0.1);">
+            <div style="padding:18px 20px;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:15px;color:rgba(3,3,7,0.85);">TANDEM</div>
+            <div style="padding:18px 20px;font-size:15px;line-height:1.6;border-left:1px solid rgba(3,3,7,0.1);color:rgba(3,3,7,0.75);">Real RPAS flight operations within a certified avionics framework, combining synchronized physiological sensing, mission telemetry, operator interactions, and flight-test data during ground-control station operations.</div>
+            <div style="padding:18px 20px;font-size:15px;line-height:1.6;border-left:1px solid rgba(3,3,7,0.1);color:rgba(3,3,7,0.75);">Multimodal operational state estimation, synchronized heterogeneous sensing, operational analysis, and human–machine interaction modelling in aviation environments.</div>
+          </div>
+          <div style="display:grid;grid-template-columns:180px 1.3fr 1.3fr;border-top:1px solid rgba(3,3,7,0.1);">
+            <div style="padding:18px 20px;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:15px;color:rgba(3,3,7,0.85);">Evidence-Based Astronaut Training</div>
+            <div style="padding:18px 20px;font-size:15px;line-height:1.6;border-left:1px solid rgba(3,3,7,0.1);color:rgba(3,3,7,0.75);">Human spaceflight training progressing from high-fidelity simulation to Canadian Space Agency analogue missions and expeditionary field environments, integrating operators, remote supervisors, and multi-agent mission execution.</div>
+            <div style="padding:18px 20px;font-size:15px;line-height:1.6;border-left:1px solid rgba(3,3,7,0.1);color:rgba(3,3,7,0.75);">Continuous actor-state estimation, multimodal mission understanding, evidence-based mission replay, supervisory decision support, and operational debrief.</div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <div style="height:1px;background:rgba(3,3,7,0.1);max-width:920px;margin:0 auto;"></div>
+
+  <!-- 09 INTEGRATION AND DEPLOYMENT PROFILES -->
+  <section style="padding:{{ sectionPad }}px 48px;max-width:920px;margin:0 auto;">
+    <div style="display:flex;gap:8px;align-items:flex-start;">
+      <div style="{{ numeralStyle }}">09</div>
+      <div style="flex:1;min-width:0;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.08em;color:rgba(3,3,7,0.5);text-transform:uppercase;margin-bottom:12px;">Integration and Deployment Profiles</div>
+        <h2 style="font-family:{{ headingFontFamily }};font-size:32px;font-weight:600;margin:0 0 32px;line-height:1.25;">Designed to Fit Mission-System Boundaries</h2>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px 40px;">
+          <sc-for list="{{ deploymentProfiles }}" as="p" hint-placeholder-count="4">
+            <div style="border-top:2px solid {{ accentColor }};padding-top:16px;">
+              <div style="font-family:{{ headingFontFamily }};font-size:17px;font-weight:600;margin-bottom:8px;">{{ p.name }}</div>
+              <div style="font-size:15px;line-height:1.65;color:rgba(3,3,7,0.7);">{{ p.desc }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div style="height:1px;background:rgba(3,3,7,0.1);max-width:920px;margin:0 auto;"></div>
+
+  <!-- 10 PLATFORM SCOPE -->
+  <section style="padding:{{ sectionPad }}px 48px;max-width:920px;margin:0 auto;">
+    <div style="display:flex;gap:8px;align-items:flex-start;">
+      <div style="{{ numeralStyle }}">10</div>
+      <div style="flex:1;min-width:0;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.08em;color:rgba(3,3,7,0.5);text-transform:uppercase;margin-bottom:12px;">Platform Scope</div>
+        <h2 style="font-family:{{ headingFontFamily }};font-size:32px;font-weight:600;margin:0 0 24px;line-height:1.25;">Mission Intelligence Infrastructure</h2>
+        <p style="font-size:18px;line-height:1.7;color:rgba(3,3,7,0.75);margin:0 0 40px;">The Mission Intelligence Layer is domain-independent at the architectural level. The operational representation and computation disciplines can be applied wherever heterogeneous observations must be converted into a continuously maintained, governed operational state.</p>
+
+        <h3 style="font-family:{{ headingFontFamily }};font-size:22px;font-weight:600;margin:0 0 20px;">Representative Operational Domains</h3>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px 40px;margin-bottom:48px;">
+          <sc-for list="{{ domains6 }}" as="dm" hint-placeholder-count="6">
+            <div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:15px;font-weight:600;margin-bottom:6px;">{{ dm.name }}</div>
+              <div style="font-size:14px;line-height:1.6;color:rgba(3,3,7,0.6);">{{ dm.desc }}</div>
+            </div>
+          </sc-for>
+        </div>
+
+        <div style="padding-top:28px;border-top:1px solid rgba(3,3,7,0.12);">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.08em;color:rgba(3,3,7,0.5);text-transform:uppercase;margin-bottom:12px;">Architectural Boundaries</div>
+          <p style="font-size:17px;line-height:1.7;color:rgba(3,3,7,0.75);margin:0 0 16px;">This architecture does not require a single umbrella AI model, online learning, or a separate model for every mission. Different computational methods may contribute to different operational primitives, while fusion, deterministic constraints, and governance determine how those outputs update shared state.</p>
+          <p style="font-size:17px;line-height:1.7;color:rgba(3,3,7,0.75);margin:0 0 24px;">The architecture also does not imply that KEPLR must be embedded within certified avionics or flight-control software. Integration can occur through mission-system interfaces and customer-controlled compute environments, preserving clear system and certification boundaries.</p>
+          <p style="font-family:{{ headingFontFamily }};font-size:20px;line-height:1.6;font-weight:600;margin:0;">KEPLR provides the software architecture through which mission-critical systems continuously estimate, maintain, govern, and use operational state. It converts fragmented observations into a coherent representation of actors, environment, and trust.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 CLOSING PRINCIPLE -->
+  <section style="padding:{{ closingPad }}px 48px;background:#0A0E16;color:#EAF2FB;">
+    <div style="max-width:820px;margin:0 auto;text-align:center;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:0.08em;color:rgba(234,242,251,0.55);text-transform:uppercase;margin-bottom:32px;">11 — Closing Principle</div>
+      <p style="font-family:'IBM Plex Mono',monospace;font-size:18px;line-height:1.9;color:rgba(234,242,251,0.7);margin:0 0 8px;">A camera produces imagery.</p>
+      <p style="font-family:'IBM Plex Mono',monospace;font-size:18px;line-height:1.9;color:rgba(234,242,251,0.7);margin:0 0 8px;">Radar produces returns.</p>
+      <p style="font-family:'IBM Plex Mono',monospace;font-size:18px;line-height:1.9;color:rgba(234,242,251,0.7);margin:0 0 40px;">Telemetry produces measurements. An AI model produces an inference.</p>
+      <p style="font-family:{{ headingFontFamily }};font-size:34px;line-height:1.4;font-weight:500;margin:0;letter-spacing:-0.01em;">KEPLR continuously maintains the operational meaning that emerges when those sources are interpreted together—and preserves the evidence required to trust, govern, and act upon that understanding.</p>
+    </div>
+  </section>
+
+  <!-- CTA / CONTACT -->
+  <section id="contact" style="padding:{{ ctaPad }}px 48px;max-width:920px;margin:0 auto;text-align:center;">
+    
+    
+    <a href="mailto:hello@keplrintelligence.com" style="display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:15px;background:#E6C17A;color:#030307;padding:16px 36px;">hello@keplrintelligence.com</a>
+  </section>
+
+  <div style="padding:{{ footerPad }}px 48px;border-top:1px solid rgba(3,3,7,0.1);display:flex;justify-content:space-between;align-items:center;max-width:920px;margin:0 auto;">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:rgba(3,3,7,0.5);">© 2026 KEPLR Intelligence</div>
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:rgba(3,3,7,0.5);">Mission Intelligence Layer</div>
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;accentColor&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#2F80ED&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;options&quot;: [&quot;#2F80ED&quot;, &quot;oklch(0.45 0.13 25)&quot;, &quot;oklch(0.45 0.12 150)&quot;, &quot;oklch(0.42 0.12 320)&quot;], &quot;section&quot;: &quot;Voice &amp; Feel&quot;},
+  &quot;voice&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;default&quot;: &quot;technical&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;options&quot;: [&quot;technical&quot;, &quot;doctrine&quot;], &quot;section&quot;: &quot;Voice &amp; Feel&quot;},
+  &quot;density&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;default&quot;: &quot;standard&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;options&quot;: [&quot;standard&quot;, &quot;compact&quot;], &quot;section&quot;: &quot;Voice &amp; Feel&quot;}
+}">
+class Component extends DCLogic {
+  renderVals() {
+    const accentColor = this.props.accentColor ?? '#2F80ED';
+    const voice = this.props.voice ?? 'technical';
+    const headingFontFamily = voice === 'doctrine' ? "'Source Serif 4',serif" : "'Helixa','IBM Plex Serif',serif";
+    const density = this.props.density ?? 'standard';
+    const dense = density === 'compact';
+    const numeralStyle = `font-family:'Helixa','IBM Plex Mono',monospace;font-size:64px;font-weight:300;background-image:linear-gradient(135deg,${accentColor},#E6C17A);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;opacity:0.55;flex-shrink:0;width:88px;line-height:1;letter-spacing:-0.02em;`;
+    return {
+      accentColor,
+      headingFontFamily,
+      numeralStyle,
+      sectionPad: dense ? 44 : 80,
+      heroPadTop: dense ? 76 : 120,
+      heroPadBottom: dense ? 56 : 100,
+      closingPad: dense ? 64 : 100,
+      ctaPad: dense ? 64 : 100,
+      footerPad: dense ? 20 : 32,
+      capabilityGroups: [
+        { name: 'Computational Intelligence', items: ['Foundation models', 'Transferable representations', 'Zero-/few-shot inference', 'Adaptive AI architectures', 'Physics-informed learning'] },
+        { name: 'Operational Representation', items: ['Continuous operational state estimation', 'Operational knowledge representation', 'Behaviour modelling', 'Dynamic context modelling'] },
+        { name: 'Mission Perception', items: ['Multimodal fusion', 'Object detection & tracking', 'Spatiotemporal reasoning', 'Signal processing & synchronization'] },
+        { name: 'Operational Trust', items: ['Evidence provenance', 'Confidence estimation', 'Explainability', 'Policy-aware information governance'] },
+        { name: 'Deployment', items: ['Sovereign edge execution', 'Air-gapped operation', 'Mission-system interoperability', 'Portable deployment across compute environments'] }
+      ],
+      flowSteps: [
+        { n: '1', title: 'Observations', desc: 'Sensor, telemetry, operator, platform, and event data.' },
+        { n: '2', title: 'Computations', desc: 'Detection, tracking, temporal analysis, fusion, inference, constraints, governance.' },
+        { n: '3', title: 'State', desc: 'Actors, environment, trust, confidence, and relationships.' },
+        { n: '4', title: 'Capabilities', desc: 'Perception, understanding, decision support, replay, audit.' }
+      ],
+      disciplines: [
+        { name: 'Computational Intelligence', desc: 'Integrates statistical inference, temporal modelling, neural architectures, foundation models, and multimodal methods to extract operational features, patterns, relationships, behaviours, and events with limited dependence on mission-specific labelled data.' },
+        { name: 'Dynamic Multimodal Fusion', desc: 'Maintains a coherent operational estimate as sensing modalities become available, degrade, disappear, or return. Observations are combined according to their timing, quality, uncertainty, and relevance to the state being estimated.' },
+        { name: 'Signal and Data-Stream Processing', desc: 'Synchronizes heterogeneous observations across asynchronous sensors, multi-rate streams, variable latency, and bandwidth-constrained links while preserving temporal relationships and data quality.' },
+        { name: 'Deterministic Computation', desc: 'Applies physical consistency, mechanics, operational constraints, safety rules, and policy conditions independently of probabilistic inference. Deterministic logic bounds and validates model outputs.' },
+        { name: 'Information Governance', desc: 'Maintains provenance, confidence, authority, classification, releasability, and dissemination as attributes of the operational state. Governance is part of computation, not a post-processing step.' }
+      ],
+      capabilities5: [
+        { name: 'Perception', desc: 'Multi-sensor detection, tracking, modality-aware fusion, spatial relationships, and sensor-quality awareness.' },
+        { name: 'Understanding', desc: 'Behaviour estimation, temporal pattern recognition, event inference, change detection, and real-time state estimation.' },
+        { name: 'Decision Support', desc: 'Situational awareness, risk indicators, prioritization, alerts, and context for human or autonomous decision processes.' },
+        { name: 'Evidence', desc: 'Mission replay, provenance-aware reconstruction, audit trails, operational review, and confidence-aware reporting.' },
+        { name: 'Governance', desc: 'Continuous enforcement and communication of authority, classification, releasability, dissemination, and applicable policy conditions.' }
+      ],
+      valueItems: [
+        { title: 'Continuous mission observability', desc: 'Maintains a current, evidence-linked representation of mission execution as data and conditions change.' },
+        { title: 'Compressed decision cycles', desc: 'Reduces the distance between observation, interpretation, and operational response by computing state continuously.' },
+        { title: 'Resilience to changing sensing conditions', desc: 'Preserves useful state estimates as sensors degrade, disappear, or return, while making uncertainty explicit.' },
+        { title: 'Proactive risk and performance management', desc: 'Moves analysis from post-mission review toward live detection of emerging operational risk, procedure drift, degraded performance, and system anomalies.' }
+      ],
+      deploymentProfiles: [
+        { name: 'Operator devices', desc: 'Tablets, workstations, and mission-user interfaces close to the operator and data source.' },
+        { name: 'Edge platforms', desc: 'Local mission compute, ruggedized workstations, ground stations, and customer-controlled edge infrastructure.' },
+        { name: 'On-premises / air-gapped', desc: 'Customer-managed environments where data sovereignty, network isolation, and local execution are required.' },
+        { name: 'Sovereign cloud', desc: 'Customer-controlled cloud or data-centre infrastructure for larger-scale processing, integration, and mission operations.' }
+      ],
+      domains6: [
+        { name: 'Aerospace and aviation', desc: 'Human-machine operations, mission execution, training, and safety-critical decision support.' },
+        { name: 'Defence and ISR', desc: 'Multi-sensor perception, operational awareness, evidence, and governed information use.' },
+        { name: 'Space operations', desc: 'Ground-segment, mission-operations, crew, payload-data, and high-latency operational contexts.' },
+        { name: 'Autonomous systems', desc: 'State and behaviour estimation across autonomous assets and human-autonomy teams.' },
+        { name: 'Maritime and remote operations', desc: 'Operational awareness under intermittent connectivity and heterogeneous sensing.' },
+        { name: 'Critical infrastructure', desc: 'Continuous state monitoring, anomaly interpretation, risk, and governed operational response.' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
